@@ -6,6 +6,9 @@ This tool is an Implementation of verify statements for TestNG framework. When u
 
 ##### Example:
 ```
+@Test
+public void verifyToolTest{(){
+
 Verify.verifyEquals("test1", "test1", "test1 doesn't match"); // pass
 Verify.verifyEquals("test!", "test2", "test2 doesn't match"); // fail (continue)
 Verify.verifyNotEquals("test!", "test3", "test3 matches"); // pass
@@ -15,6 +18,8 @@ Verify.verifyTrue(false, "test6 condition is false"); // fail (continue)
 Assert.assertEquals("test$", "test7", "test7 doesn't match"); // fail (exit)		
 Assert.assertEquals("test8", "test8", "test8 doesn't match"); // not run!
 Verify.verifyEquals("test9", "test9", "test9 doesn't match"); // not run!
+
+}
 ```
 More examples included in `org.muthu.VerifyTests`
 
@@ -27,5 +32,5 @@ More examples included in `org.muthu.VerifyTests`
 -	Add ‘org.muthu.TestMethodListener’  to your TestNG listeners list
 -	Done! 
 
-Now you can use verify statements in your tests	
+Now you can use verify statements in your test
 
