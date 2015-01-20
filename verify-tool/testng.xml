@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!-- Please make sure to remove TestMethodListener from VerifyTests before running this xml-->
+
+<suite thread-count="4" name="testng-verify-tool" parallel="methods">
+
+	<listeners>
+		<listener class-name="org.muthu.TestMethodListener" />
+	</listeners>
+
+	<test name="tests" preserve-order="false">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="org.muthu.VerifyTests" />
+		</classes>
+	</test>
+</suite>
