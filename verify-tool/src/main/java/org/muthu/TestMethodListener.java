@@ -17,7 +17,12 @@ public class TestMethodListener implements IInvokedMethodListener{
 	@Override
 	public void beforeInvocation(IInvokedMethod method, ITestResult testResult) {
 
-		if(method.isTestMethod()){			
+		if(method.isTestMethod()){	
+			
+			if(TestMethodErrorBuffer.get()!=null){
+				throw new RuntimeException("Stale error buffer detected!");
+			}
+			
 			TestMethodErrorBuffer.set(new ArrayList<Throwable>()); // each test method will have its own error buffer
 		}
 
@@ -68,6 +73,9 @@ public class TestMethodListener implements IInvokedMethodListener{
 				}
 
 			}
+			
+			TestMethodErrorBuffer.remove(); // remove stale
+			
 		}
 	}
 
