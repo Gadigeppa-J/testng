@@ -589,7 +589,7 @@ public class Verify {
 
 		}catch(NullPointerException ex){
 
-			throw new RuntimeException("Please let TestNG know about your " + TestMethodListener.class.getName() + " listener. For more information go to http://testng.org/doc/documentation-main.html#testng-listeners");
+			throw new RuntimeException("Please let TestNG know about " + TestMethodListener.class.getName() + " listener for verify statements to work. For more information go to http://testng.org/doc/documentation-main.html#testng-listeners");
 		}
 
 	}
