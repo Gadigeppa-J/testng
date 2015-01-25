@@ -8,7 +8,7 @@ import java.util.Set;
 import org.testng.Assert;
 
 /**
- * Assertion tool class. Wrapper around TestNG Assert.
+ * Verification tool class. Wrapper class around TestNG Assert.
  * @author <a href='mailto:gadigeppa.code@gmail.com'>Gadigeppa Jattennavar</a>
  */
 public class Verify {
@@ -589,7 +589,7 @@ public class Verify {
 
 		}catch(NullPointerException ex){
 
-			throw new RuntimeException("Please add " + TestMethodListener.class.getName() + " to your TestNG listeners list.");
+			throw new RuntimeException("Please let TestNG know about your " + TestMethodListener.class.getName() + " listener. For more information go to http://testng.org/doc/documentation-main.html#testng-listeners");
 		}
 
 	}
